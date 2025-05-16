@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -9,11 +9,14 @@
 </head>
 
 <body id="default">
+
+    <!-- Cabeçalho principal com navegação -->
     <header>
         <div class="cabecalho">
             <h1 id="nome">Pietro Rodrigues</h1>
             <nav class="menu">
                 <ul>
+                    <!-- Navegação por seções com âncoras no JavaScript -->
                     <li><a href="#" data-section="sobre">Sobre mim</a></li>
                     <li><a href="#" data-section="formacao">Formação</a></li>
                     <li><a href="#" data-section="portifolio">Portifólio</a></li>
@@ -24,7 +27,9 @@
         </div>
     </header>
 
+    <!-- Todas as seções da pagina -->
     <main>
+        <!-- Seção 'Sobre mim' com texto e imagem -->
         <section class="conteudo" id="sobre">
             <div class="interface">
                 <div class="flex">
@@ -72,31 +77,123 @@
                 </div>
             </div>
         </section>
-        <section class="conteudo" id="formacao">
-            <div>
-                <h2 class="titulo">Formação</h2>
-                <br>
-                <p>Atualmente, estou cursando Engenharia de Software na Universidade Uninter, onde tenho adquirido
-                    conhecimentos
-                    sólidos em desenvolvimento de software, arquitetura de sistemas e metodologias ágeis.</p><br>
 
-                <p>Além disso, busco constantemente me atualizar por meio de cursos online e projetos pessoais,
-                    explorando
-                    novas tecnologias e práticas recomendadas na área.</p><br>
+        <!-- Seção de Formação Acadêmica -->
+        <section class="conteudo" id="formacao">
+            <div class="interface">
+                <div class="flex">
+                    <div class="textoConteudo">
+                        <h2 class="titulo">Formação</h2>
+                        <br>
+                        <div class="formacaoItem">
+                            <h3>Bacharelado em Engenharia de Software</h3>
+                            <p><strong>Instituição:</strong> Centro Universitário Internacional – UNINTER</p>
+                            <p><strong>Local:</strong> São Paulo, SP</p>
+                            <p><strong>Período:</strong> Março 2024 – Dezembro 2027</p>
+                            <p><strong>Status:</strong> Cursando</p>
+                        </div>
+
+                        <div class="formacaoItem">
+                            <h3>Tecnólogo em Desenvolvimento de Jogos</h3>
+                            <p><strong>Instituição:</strong> Universidade Cruzeiro do Sul – UNICSUL</p>
+                            <p><strong>Local:</strong> São Paulo, SP</p>
+                            <p><strong>Período:</strong> Março 2019 – Dezembro 2020</p>
+                            <p><strong>Status:</strong> Trancado</p>
+                        </div>
+
+                        <div class="formacaoItem">
+                            <h3>Curso de Modelagem 3D</h3>
+                            <p><strong>Instituição:</strong> People Tecnologia</p>
+                            <p><strong>Local:</strong> São Paulo, SP</p>
+                            <p><strong>Duração:</strong> 2 anos</p>
+                            <p><strong>Status:</strong> Concluído</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- Seção de Portfólio com projetos -->
         <section class="conteudo" id="portifolio">
-            <div>
-                <h2 class="titulo">Portifólio</h2>
+            <div class="interface">
+                <div class="flex">
+                    <div class="textoConteudo">
+                        <h2 class="titulo">Portifólio</h2>
+
+                        <div class="portfolioGrid">
+
+                            <div class="portfolioItem">
+                                <img src="Image/PlaneFlyImg.png" alt="Projeto Unity">
+                                <h3>Fisica de avião de combate para jogos</h3>
+                                <p>Fisica realista de avião de combate para jogos, usando C# e Unity 6.</p>
+                                <a href="https://youtu.be/obeWIqsmW3o" target="_blank">Ver Projeto</a>
+                                <a href="https://github.com/PietroRodrigues/Lonely" target="_blank">Github</a>
+                            </div>
+
+                            <div class="portfolioItem">
+                                <img src="Image/PexeDevSite.png" alt="Projeto em HTML/CSS">
+                                <h3>Estrutura base de site</h3>
+                                <p>Estrutura base de um site para portifolio, desenvolvimento puramente com HTML e CSS.
+                                </p>
+                                <a href="https://pietrorodrigues.github.io/PexeDevSite/" target="_blank">Ver Projeto</a>
+                                <a href="https://github.com/PietroRodrigues/PexeDevSite" target="_blank">Github</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- Seção de Contato com formulário -->
         <section class="conteudo" id="contato">
-            <div>
-                <h2 class="titulo">Contato</h2>
+            <div class="interface">
+                <div class="flex">
+                    <div class="textoConteudo">
+                        <h2 class="titulo">Contato</h2>
+
+                        <!-- Formulário de contato com validação HTML5 -->
+                        <form class="formContato" action="#" method="post">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nomeContato" name="nomeContato" required>
+
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                            <div class="buttonContainer">
+                                <button type="submit">Enviar</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
+    <!-- Rodapé com links de redes sociais -->
+    <footer id="footer">
+        <div class="footerContent">
+            <div class="socialLinks">
+                <a href="https://github.com/PietroRodrigues" target="_blank" aria-label="GitHub">
+                    <img src="Image/GitHubLogo.png" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/pietro_developer/" target="_blank" aria-label="Instagram">
+                    <img src="Image/InstagramLogo.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/pietrorodrigues/" target="_blank" aria-label="LinkedIn">
+                    <img src="Image/linkedinLogo.png" alt="LinkedIn">
+                </a>
+                <p>&copy;Pietro Rodrigues. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript para navegação ou interação -->
     <script src="meuScript.js"></script>
 </body>
 

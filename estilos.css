@@ -1,3 +1,4 @@
+/* ------------------- RESET E CONFIGURAÇÃO GLOBAL ------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -5,17 +6,19 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* ------------------- CABEÇALHO / HEADER ------------------- */
 #nome {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 238, 255);
     font-size: 48px;
     text-align: center;
     padding: 30px;
 }
 
 header a {
-    color: rgba(0, 225, 255, 0.76);
+    color: rgba(0, 132, 255, 0.76);
     text-decoration: underline;
     font-size: 38px;
+    font-weight: bold;
     display: inline-block;
     transition: 0.2s;
 }
@@ -31,7 +34,11 @@ header nav ul {
     justify-content: center;
     gap: 60px;
     padding: 20px;
-    margin: 0;
+}
+
+/* ------------------- ESTRUTURA BASE ------------------- */
+body {
+    background-color: black;
 }
 
 .interface {
@@ -43,20 +50,25 @@ header nav ul {
     display: flex;
     padding: 40px;
     margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-body {
-    background-color: black;
-}
-
+/* ------------------- TÍTULOS GERAIS DAS SEÇÕES ------------------- */
 h2.titulo {
     color: rgb(0, 238, 255);
-    font-size: 38px;
+    border-bottom: 2px solid rgb(0, 238, 255);
+    font-weight: bold;
     text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
 }
 
+/* ------------------- SEÇÃO: SOBRE ------------------- */
 .conteudo .textoConteudo h1 {
-
     color: white;
     font-size: 42px;
     line-height: 40px;
@@ -65,15 +77,7 @@ h2.titulo {
 .conteudo .textoConteudo p {
     color: white;
     font-size: 18px;
-    margin: 20px 0;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    margin: 20px;
 }
 
 .textoConteudo {
@@ -94,8 +98,155 @@ h2.titulo {
     border-radius: 25px;
 }
 
+/* Oculta as seções por padrão exibidas via JavaScript */
 .conteudo {
     display: none;
     align-items: center;
     justify-content: space-between;
+}
+
+/* ------------------- SEÇÃO: FORMAÇÃO ------------------- */
+.formacaoItem {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 4px solid rgb(0, 238, 255);
+    border-bottom: 4px solid rgb(0, 238, 255);
+}
+
+.formacaoItem h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: rgb(0, 238, 255);
+}
+
+.formacaoItem strong {
+    margin-bottom: 10px;
+    color: rgb(0, 238, 255);
+}
+
+/* ------------------- SEÇÃO: CONTATO ------------------- */
+.formContato {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.formContato label {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.formContato input,
+.formContato textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 16px;
+    border: 5px solid rgb(14, 127, 219);
+    border-radius: 6px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.formContato input:focus,
+.formContato textarea:focus {
+    border-color: rgb(0, 225, 255);
+    outline: none;
+}
+
+.formContato .buttonContainer {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+}
+
+.formContato button {
+    padding: 12px;
+    font-size: 26px;
+    font-weight: bold;
+    background-color: #007acc;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.formContato button:hover {
+    background-color: #00c3ff;
+}
+
+/* ------------------- SEÇÃO: PORTFÓLIO ------------------- */
+.portfolioGrid {
+    display: grid;
+    width: 100%;
+    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.portfolioItem {
+    box-shadow: 8px 8px 18px rgba(0, 247, 255, 0.4);
+}
+
+.portfolioItem img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.portfolioItem h3 {
+    font-size: 20px;
+    margin: 20px;
+    color: #00bfff;
+}
+
+.portfolioItem a {
+    display: inline-block;
+    margin: 0 15px 15px;
+    padding: 10px 15px;
+    background-color: #007acc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.portfolioItem a:hover {
+    background-color: #005f99;
+}
+
+/* ------------------- RODAPÉ / FOOTER ------------------- */
+#footer {
+    background-color: #0285d1;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footerContent {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footerContent p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.socialLinks a {
+    display: inline-block;
+    margin: 0 25px;
+    transition: 0.2s;
+}
+
+.socialLinks img {
+    width: 28px;
+    height: 28px;
+}
+
+.socialLinks a:hover {
+    transform: scale(1.2);
 }
