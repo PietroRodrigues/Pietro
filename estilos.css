@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#nome {
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    text-align: center;
+    padding: 30px;
+}
+
+header a {
+    color: rgba(0, 225, 255, 0.76);
+    text-decoration: underline;
+    font-size: 38px;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+header a:hover {
+    color: rgb(0, 238, 255);
+    transform: scale(1.2);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px;
+    margin: 0;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: black;
+}
+
+h2.titulo {
+    color: rgb(0, 238, 255);
+    font-size: 38px;
+    text-align: center;
+}
+
+.conteudo .textoConteudo h1 {
+
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.conteudo .textoConteudo p {
+    color: white;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.textoConteudo {
+    flex: 3;
+    min-width: 300px;
+}
+
+.imagemConteudo {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagemConteudo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.conteudo {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
